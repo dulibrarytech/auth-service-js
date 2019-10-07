@@ -1,19 +1,23 @@
 {
-  "name": "collections-as-data-api",
+  "name": "auth-service-js",
   "version": "1.0.0",
-  "description": "Proof of concept API for Collections as Data grant project",
+  "description": "LDAP authentication service",
   "main": "cad-api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "colletions-as-data-api"
+    "url": "auth-service-js"
   },
   "author": "Jeff Rynhart",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "ldapauth": "^2.3.1",
+    "ldapjs": "^1.0.2",
+    "simple-ldap-client": "^0.5.0"
   }
 }
