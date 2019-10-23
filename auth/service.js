@@ -11,11 +11,11 @@ exports.authenticateUser = function(username, password) {
 		try {
 			ldap.authenticate({ upn: "uid=" + username + "," + baseDn, password: password })
 			.then(() => {
-			  console.log('LDAP authentication successful: %s', username)
 			  fulfill(true);
 			})
 			.catch(error => {
-			  console.log('LDAP authentication not successful: %s %s %s', username, error.message)
+			  console.log('LDAP authentication not successful: ' + username)
+			  console.error(error.message);
 			  fulfill(false);
 			})
 		}
